@@ -13,12 +13,19 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    
-    {{-- header --}}
-    {{ View::make('layouts.header') }}
 
-    {{-- content --}}
-    @yield('content')
+        <div class="h-100 d-flex flex-column justify-content-between">
+
+            {{-- header --}}
+            {{ View::make('components.header') }}
+
+            {{-- content --}}
+            @yield('content')
+
+            {{-- footer --}}
+            {{ View::make('components.footer') }}
+
+        </div>
 
     {{-- app js --}}
     <script src="{{ asset('js/app.js') }}"></script>
