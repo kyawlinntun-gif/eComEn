@@ -14,7 +14,11 @@
 </head>
 <body>
 
-        <div class="h-100 d-flex flex-column justify-content-between">
+        <div class="h-100 
+            @if (Request::is('login'))
+                d-flex flex-column justify-content-between
+            @endif
+        ">
 
             {{-- header --}}
             {{ View::make('components.header') }}
